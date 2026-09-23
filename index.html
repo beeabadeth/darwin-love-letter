@@ -1,0 +1,1114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Darwin ♡</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Parisienne&family=Playfair+Display:ital@0;1&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background:
+        radial-gradient(circle at 20% 20%, #fff9fb, transparent 30%),
+        radial-gradient(circle at 80% 80%, #ffe0e9, transparent 35%),
+        #fdf1f5;
+    color: #744052;
+    font-family: "Cormorant Garamond", serif;
+    overflow-x: hidden;
+}
+
+/* FLOATING HEARTS */
+
+.floating-hearts span {
+    position: fixed;
+    bottom: -40px;
+    color: #df7f98;
+    font-size: 24px;
+    opacity: .6;
+    pointer-events: none;
+    animation: floatUp linear infinite;
+    z-index: 1;
+}
+
+.floating-hearts span:nth-child(1) {
+    left: 5%;
+    animation-duration: 10s;
+}
+
+.floating-hearts span:nth-child(2) {
+    left: 18%;
+    animation-duration: 13s;
+    animation-delay: 2s;
+}
+
+.floating-hearts span:nth-child(3) {
+    left: 32%;
+    animation-duration: 11s;
+    animation-delay: 4s;
+}
+
+.floating-hearts span:nth-child(4) {
+    left: 47%;
+    animation-duration: 14s;
+    animation-delay: 1s;
+}
+
+.floating-hearts span:nth-child(5) {
+    left: 63%;
+    animation-duration: 10s;
+    animation-delay: 3s;
+}
+
+.floating-hearts span:nth-child(6) {
+    left: 78%;
+    animation-duration: 12s;
+    animation-delay: 5s;
+}
+
+.floating-hearts span:nth-child(7) {
+    left: 92%;
+    animation-duration: 11s;
+    animation-delay: 2s;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: .7;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(30deg);
+        opacity: 0;
+    }
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    padding-top: 70px;
+    position: relative;
+    z-index: 2;
+}
+
+.bow {
+    font-size: 42px;
+    color: #cf718a;
+}
+
+.intro h1 {
+    font-family: "Parisienne", cursive;
+    font-size: clamp(60px, 12vw, 100px);
+    font-weight: normal;
+    line-height: .9;
+    color: #a94d69;
+    margin: 5px 0;
+    text-shadow: 2px 2px white;
+}
+
+.intro p {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-size: 17px;
+    color: #a46376;
+}
+
+/* ENVELOPE AREA */
+
+.envelope-area {
+    min-height: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 3;
+}
+
+.click-text {
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    color: #a25a71;
+    margin-bottom: 30px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        opacity: .45;
+    }
+}
+
+/* ENVELOPE */
+
+.envelope {
+    width: 340px;
+    height: 230px;
+    position: relative;
+    cursor: pointer;
+    perspective: 1000px;
+    filter: drop-shadow(0 20px 20px rgba(120,50,70,.18));
+}
+
+.envelope-back {
+    position: absolute;
+    inset: 0;
+    background: #ef9db3;
+    border-radius: 7px;
+    z-index: 1;
+}
+
+/* LETTER */
+
+.letter {
+    position: absolute;
+    width: 305px;
+    height: 430px;
+    left: 17px;
+    bottom: 10px;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 28px,
+            rgba(190,110,130,.07) 29px
+        ),
+        #fffaf7;
+
+    border: 1px solid #edccd5;
+    padding: 30px 24px;
+
+    text-align: center;
+
+    box-shadow: 0 10px 25px rgba(120,50,70,.12);
+
+    transition:
+        transform 1.3s cubic-bezier(.2,.8,.2,1),
+        z-index .1s;
+
+    z-index: 2;
+}
+
+.lace {
+    color: #d9829a;
+    letter-spacing: 5px;
+}
+
+.dear {
+    font-family: "Parisienne", cursive;
+    font-size: 34px;
+    color: #9e4862;
+    margin: 18px 0;
+}
+
+.divider {
+    color: #d68198;
+    font-size: 14px;
+    margin: 15px 0;
+}
+
+.main-message {
+    font-family: "Parisienne", cursive;
+    font-size: 48px;
+    color: #d45c7b;
+    margin: 18px 0;
+}
+
+.letter-text {
+    font-size: 17px;
+    line-height: 1.4;
+    color: #704553;
+}
+
+.signature {
+    font-family: "Parisienne", cursive;
+    font-size: 31px;
+    color: #a94e6a;
+    text-align: right;
+}
+
+.letter-hearts {
+    color: #d96e89;
+    letter-spacing: 8px;
+}
+
+/* ENVELOPE FRONT */
+
+.envelope-front {
+    position: absolute;
+    inset: 0;
+    background: #ed91aa;
+
+    clip-path: polygon(
+        0 0,
+        50% 58%,
+        100% 0,
+        100% 100%,
+        0 100%
+    );
+
+    border-radius: 7px;
+    z-index: 4;
+}
+
+/* FLAP */
+
+.envelope-flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 170px solid transparent;
+    border-right: 170px solid transparent;
+    border-top: 125px solid #f6abc0;
+
+    transform-origin: top;
+    transition: transform 1s ease;
+
+    z-index: 6;
+}
+
+/* HEART SEAL */
+
+.heart-seal {
+    position: absolute;
+
+    left: 50%;
+    top: 100px;
+
+    transform: translate(-50%, -50%);
+
+    width: 52px;
+    height: 52px;
+
+    background: #c95372;
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 0 0 5px #f9c4d2,
+        0 5px 12px rgba(120,40,60,.2);
+
+    z-index: 7;
+
+    transition: .5s;
+}
+
+/* BOW */
+
+.envelope-bow {
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    color: #b94d6c;
+    font-size: 45px;
+
+    z-index: 8;
+}
+
+/* OPENING */
+
+.envelope.open .envelope-flap {
+    transform: rotateX(180deg);
+    z-index: 1;
+}
+
+.envelope.open .letter {
+    transform: translateY(-285px);
+    z-index: 5;
+}
+
+.envelope.open .heart-seal {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+}
+
+/* SURPRISE */
+
+.surprise {
+    padding: 100px 20px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 4;
+}
+
+.card {
+    width: min(700px, 95%);
+    padding: 50px 30px;
+
+    background: rgba(255,250,249,.8);
+
+    border: 1px solid #edc5d0;
+    border-radius: 20px;
+
+    box-shadow:
+        0 20px 50px rgba(135,68,87,.12);
+
+    text-align: center;
+}
+
+.card .bow-title {
+    font-size: 45px;
+    color: #d2748d;
+}
+
+.card h2,
+.notes h2,
+.final h2 {
+    font-family: "Parisienne", cursive;
+    font-size: 48px;
+    font-weight: normal;
+    color: #a34b66;
+    margin: 5px 0;
+}
+
+.subtitle {
+    font-style: italic;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 30px 0;
+}
+
+.buttons button {
+    border: 1px solid #dfa1b2;
+    background: #fff4f7;
+    color: #9e5068;
+
+    padding: 12px 20px;
+
+    border-radius: 30px;
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: .3s;
+}
+
+.buttons button:hover {
+    background: #e98ca5;
+    color: white;
+    transform: translateY(-4px);
+}
+
+.message-box {
+    min-height: 110px;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px dashed #d88da2;
+
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: .4s;
+}
+
+.message-heart {
+    font-size: 28px;
+    color: #d76482;
+}
+
+#secretMessage {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+/* LOVE NOTES */
+
+.notes {
+    padding: 90px 20px;
+    text-align: center;
+    position: relative;
+    z-index: 3;
+}
+
+.note-container {
+    max-width: 900px;
+    margin: 40px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(2,1fr);
+
+    gap: 20px;
+}
+
+.note {
+    padding: 30px;
+    min-height: 150px;
+
+    background: #fffaf8;
+
+    border: 1px solid #eccbd4;
+
+    box-shadow:
+        5px 8px 0 rgba(218,139,159,.15);
+
+    transform: rotate(-1deg);
+
+    transition: .3s;
+}
+
+.note:nth-child(even) {
+    transform: rotate(1deg);
+}
+
+.note:hover {
+    transform: translateY(-5px) rotate(0);
+}
+
+.note span {
+    font-size: 30px;
+    color: #d36784;
+}
+
+.note p {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* FINAL */
+
+.final {
+    min-height: 650px;
+
+    padding: 120px 25px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.final h2 {
+    font-size: 55px;
+}
+
+.final p {
+    max-width: 550px;
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+.big-heart {
+    margin-top: 30px;
+
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #df718d;
+    color: white;
+
+    font-size: 50px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 0 0 10px #f8c8d4,
+        0 12px 25px rgba(128,50,70,.2);
+
+    transition: .3s;
+}
+
+.big-heart:hover {
+    transform: scale(1.15);
+}
+
+.ending {
+    margin-top: 60px;
+
+    font-family: "Playfair Display", serif;
+
+    font-style: italic;
+
+    font-size: 18px;
+}
+
+.ending span {
+    font-family: "Parisienne", cursive;
+
+    font-size: 35px;
+
+    color: #ad4f6a;
+}
+
+/* HEART BURST */
+
+.burst {
+    position: fixed;
+
+    pointer-events: none;
+
+    color: #d85e7b;
+
+    font-size: 25px;
+
+    z-index: 100;
+
+    animation: burst 1.3s ease-out forwards;
+}
+
+@keyframes burst {
+
+    from {
+        opacity: 1;
+
+        transform:
+            translate(0,0)
+            scale(1);
+    }
+
+    to {
+        opacity: 0;
+
+        transform:
+            translate(var(--x),var(--y))
+            scale(.4)
+            rotate(30deg);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:600px) {
+
+    .intro {
+        padding-top: 50px;
+    }
+
+    .envelope {
+        width: 300px;
+        height: 205px;
+    }
+
+    .envelope-flap {
+        border-left-width: 150px;
+        border-right-width: 150px;
+        border-top-width: 110px;
+    }
+
+    .letter {
+        width: 270px;
+        height: 390px;
+        left: 15px;
+    }
+
+    .envelope.open .letter {
+        transform: translateY(-270px);
+    }
+
+    .main-message {
+        font-size: 40px;
+    }
+
+    .letter-text {
+        font-size: 15px;
+    }
+
+    .note-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card h2,
+    .notes h2 {
+        font-size: 40px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- FLOATING HEARTS -->
+
+<div class="floating-hearts">
+
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+    <span>♥</span>
+    <span>♡</span>
+
+</div>
+
+
+<!-- INTRO -->
+
+<section class="intro">
+
+    <div class="bow">
+        ୨୧
+    </div>
+
+    <h1>
+        A little letter<br>
+        for you
+    </h1>
+
+    <p>
+        made with love, just for Darwin ♡
+    </p>
+
+</section>
+
+
+<!-- ENVELOPE -->
+
+<section class="envelope-area">
+
+    <p class="click-text">
+        ♡ click the heart to open ♡
+    </p>
+
+    <div
+        class="envelope"
+        id="envelope"
+        onclick="openEnvelope()"
+    >
+
+        <div class="letter">
+
+            <div class="lace">
+                ♡ · ˚ ♡ ˚ · ♡
+            </div>
+
+            <p class="dear">
+                To my love, Darwin
+            </p>
+
+            <div class="divider">
+                ୨୧ ───── ♡ ───── ୨୧
+            </div>
+
+            <p class="main-message">
+                I love you! ♡
+            </p>
+
+            <p class="letter-text">
+                Thank you for being one of the most
+                special people in my life.
+                Through the happy days, random moments,
+                little arguments, and everything in between,
+                I'm still grateful that I get to share
+                so many memories with you.
+            </p>
+
+            <p class="letter-text">
+                You make ordinary days feel a little
+                more special. I hope we keep making
+                more memories together — one silly moment,
+                one laugh, and one adventure at a time.
+            </p>
+
+            <div class="divider">
+                ♡ ˚₊‧ ୨୧ ‧₊˚ ♡
+            </div>
+
+            <p>
+                Always yours in this little corner
+                of the internet ♡
+            </p>
+
+            <p class="signature">
+                — Berna
+            </p>
+
+            <div class="letter-hearts">
+                ♡ ♥ ♡ ♥ ♡
+            </div>
+
+        </div>
+
+
+        <div class="envelope-back"></div>
+
+        <div class="envelope-flap"></div>
+
+        <div class="envelope-front"></div>
+
+        <div class="heart-seal">
+            ♥
+        </div>
+
+        <div class="envelope-bow">
+            ୨୧
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SURPRISE -->
+
+<section class="surprise">
+
+    <div class="card">
+
+        <div class="bow-title">
+            ୨୧
+        </div>
+
+        <h2>
+            A few little things...
+        </h2>
+
+        <p class="subtitle">
+            because one message isn't enough ♡
+        </p>
+
+
+        <div class="buttons">
+
+            <button onclick="showMessage(1)">
+                💌 Open this
+            </button>
+
+            <button onclick="showMessage(2)">
+                🎀 Another one
+            </button>
+
+            <button onclick="showMessage(3)">
+                ♡ One more
+            </button>
+
+            <button onclick="showMessage(4)">
+                ✨ Secret
+            </button>
+
+        </div>
+
+
+        <div
+            class="message-box"
+            id="messageBox"
+        >
+
+            <span class="message-heart">
+                ♡
+            </span>
+
+            <p id="secretMessage">
+                Click one of the little buttons above ♡
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOVE NOTES -->
+
+<section class="notes">
+
+    <h2>
+        little love notes 🎀
+    </h2>
+
+
+    <div class="note-container">
+
+        <div class="note">
+
+            <span>♡</span>
+
+            <p>
+                You are one of my favorite parts
+                of my everyday life.
+            </p>
+
+        </div>
+
+
+        <div class="note">
+
+            <span>୨୧</span>
+
+            <p>
+                I hope we never run out of things
+                to laugh about.
+            </p>
+
+        </div>
+
+
+        <div class="note">
+
+            <span>♥</span>
+
+            <p>
+                Thank you for all the little moments
+                that became big memories.
+            </p>
+
+        </div>
+
+
+        <div class="note">
+
+            <span>♡</span>
+
+            <p>
+                No matter how ordinary the day is,
+                having you in it makes it sweeter.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FINAL -->
+
+<section class="final">
+
+    <div style="font-size:30px;">
+        ✦
+    </div>
+
+    <h2>
+        And one last thing...
+    </h2>
+
+    <p>
+        If you ever forget how loved you are,
+        come back to this little letter. ♡
+    </p>
+
+
+    <div
+        class="big-heart"
+        onclick="heartBurst()"
+    >
+        ♥
+    </div>
+
+    <p style="font-size:14px; font-style:italic;">
+        tap the heart 🎀
+    </p>
+
+
+    <div id="heartMessage"></div>
+
+
+    <div class="ending">
+
+        forever and always,<br>
+
+        <span>
+            Berna ♡
+        </span>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* OPEN ENVELOPE */
+
+function openEnvelope() {
+
+    const envelope =
+        document.getElementById("envelope");
+
+    envelope.classList.toggle("open");
+
+}
+
+
+/* SECRET MESSAGES */
+
+function showMessage(number) {
+
+    const message =
+        document.getElementById("secretMessage");
+
+    const box =
+        document.getElementById("messageBox");
+
+
+    const messages = {
+
+        1:
+        "I hope you know that I appreciate even the smallest things you do. Sometimes, it is the little things that stay with me the longest. ♡",
+
+        2:
+        "If I could keep one thing forever, it would be the memories we've made together — the funny ones, the random ones, and even the simple ones. 🎀",
+
+        3:
+        "Thank you for staying through the good days and the not-so-good ones. I may not always say it perfectly, but I really do appreciate you. ♥",
+
+        4:
+        "SECRET MESSAGE: You found the extra-sweet part of the website. So here's your reminder: you are loved. Very, very much. ♡"
+
+    };
+
+
+    message.innerHTML =
+        messages[number];
+
+
+    box.style.transform =
+        "scale(.95)";
+
+
+    setTimeout(() => {
+
+        box.style.transform =
+            "scale(1)";
+
+    },100);
+
+}
+
+
+/* HEART BURST */
+
+function heartBurst() {
+
+    const heart =
+        document.querySelector(".big-heart");
+
+
+    const rect =
+        heart.getBoundingClientRect();
+
+
+    const centerX =
+        rect.left + rect.width / 2;
+
+
+    const centerY =
+        rect.top + rect.height / 2;
+
+
+    for(let i = 0; i < 20; i++) {
+
+        const miniHeart =
+            document.createElement("div");
+
+
+        miniHeart.className =
+            "burst";
+
+
+        miniHeart.innerHTML =
+            Math.random() > .5
+            ? "♥"
+            : "♡";
+
+
+        miniHeart.style.left =
+            centerX + "px";
+
+
+        miniHeart.style.top =
+            centerY + "px";
+
+
+        const angle =
+            Math.random() * Math.PI * 2;
+
+
+        const distance =
+            80 + Math.random() * 160;
+
+
+        miniHeart.style.setProperty(
+            "--x",
+            Math.cos(angle) * distance + "px"
+        );
+
+
+        miniHeart.style.setProperty(
+            "--y",
+            Math.sin(angle) * distance + "px"
+        );
+
+
+        document.body.appendChild(
+            miniHeart
+        );
+
+
+        setTimeout(() => {
+
+            miniHeart.remove();
+
+        },1300);
+
+    }
+
+
+    document.getElementById(
+        "heartMessage"
+    ).innerHTML =
+        "♡ I love you, Darwin. ♡";
+
+}
+
+</script>
+
+</body>
+  </html>
